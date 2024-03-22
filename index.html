@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/RL.781b49c7.jpg" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <title>Roy Luo</title>
+    <meta property="og:title" content="Roy Luo"/>
+    <meta name="description" content="Roy Luo 3D Portfolio"/>
+    <meta property="og:description" content="Roy Luo 3D Portfolio"/>
+    <script type="module" crossorigin src="/assets/index.b25b256b.js"></script>
+    <link rel="stylesheet" href="/assets/index.5a548ef5.css">
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"/></svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
+        </div>
+      </div>
+      
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+
+            <!-- Intro Stuff -->
+            <div class="intro-text"> &lt; Hello World > </div>
+            <div class="arrow-svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Hi! Im Roy Luo! </h1>
+              <p class="hero-main-description">SWE Intern && ECE Student @ UW </p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Roy Luo</p>
+              <p class="hero-second-subheading second-sub">Portfolio</p>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+          </div>
+
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Hello!</h3>
+            <p class="section-text">I'm currently working as a full-stack software engineer intern at Advanced Electrophoresis Solutions and a first-year Electrical Engineering student at the University of Waterloo.</p>
+            <p class="section-text">This is the my website (v.3.2.0) I built to creatively deploy my jouney as an undergraduate engineering student. </p>
+            <p class="section-text">At the moment, I'm hands-on with the Nvidia Jetson AGX Xavier AI Development Board, leveraging OpenCV to gain insights into embedded
+             systems, visual odometry, sensor fusion, localization and mapping, obstacle detection, and path-planning algorithms. </p>
+            <p class="section-text">Linkedln, Github, Resume, Portfolio</p>
+            <div>
+            <p><a href="https://www.linkedin.com/in/ee-royluo/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a> </p>
+            <p><a href="https://github.com/ryouol"><img src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white" alt="Github"></a> </p>
+          </div>
+            <br>
+            <br>
+            <h3 class="section-heading">My Tech Stack!</h3>
+            <p class="section-text"><strong>•Programming Languages : </strong>C/C++, Python, Java, Obj-C, Swift, Javascript, Pascal, VHDL
+              <br>
+              <br><strong>•Frontend Development :</strong> HTML, CSS, React, Three.JS, Bootstrap 4, DRACOLoader, GSAP, wxWidgets
+              <br>
+              <br><strong>•Backend Development :</strong> Node.js, Flask
+              <br>
+              <br><strong>•AI/ML : </strong>OpenCV, TensorFlow, PyTorch
+              <br>
+              <br><strong>•Database :</strong> MongoDB, MySQL, OracleDB, wxSQLite3
+              <br>
+              <br><strong>•Devops : </strong>AWS, Docker, Bash, Git
+              <br>
+              <br><strong>•Crytogprahy : </strong>Crytopp, Auth0
+              <br>
+              <br><strong>•Embdeeded Systems :</strong> FPGA, Nvidia Jetson AGX Xavier, STM32, Rasberry Pi, Arduino
+              <br>
+              <br><strong>•Software :</strong> Altium, Blender, AutoCAD, SimScale
+              <br>
+              <br><strong>•What im getting into currently :</strong> Rust
+              <br>
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 id="education">EDUCATION</h1>
+            <br>
+            <br>
+            <br>
+            <p><img src="/assets/UWECE.5155c0a9.png" alt="UWECE logo"></p>
+            <br>
+            <br>
+            <h3> University of Waterloo | Faculty of Engineering | Deparment of Electrical & Computer Engineering</h3>
+            <br>
+            <br>
+            <h4 id="BASc EE">BASc In Electrical Engineering, Specialization in Artifical Intelligence, Honours, Co-op</h4>
+            <br>
+            <br>
+            <p>[ 2023  -  Present ]</p>
+            <p>Presidents Scholarship with Distinction</p>
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Projects</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+<div class="section-detail-wrapper">
+
+
+  <h3 class="section-heading">AI Posing w/ Nvidia Jetson AGX </h3>
+  <p class="section-text">AI/ML Embedded Development + Computer Vision| C/C++, Python, OpenCV, TensorFlow, PyTorch, Nvidia Jetson AGX Xavier</p>
+  <p class="section-text"> <br>•Designed an AI system using Nvidia Jetson for real-time posture monitoring and correction alerts during desk work.
+    <br>• Optimized pre-trained models for high accuracy and real-time feedback on posture, ensuring ergonomic health for
+    prolonged desk usage.
+    <br>• Developed custom training protocols with MSCOCO format, useing pose estimation to help users correct their posture by alerting them when they are slouching, leaning, or tilting their head down</p>
+  <br>
+
+
+  <h3 class="section-heading">MindBridge | Major League Hacking Hackathon Winner</h3>
+  <p class="section-text">Full Stack Web Development | Python, Node.JS, React, HTML/CSS, Javascript, FastAPI, OpenAI TTS API, MongoDB, Twilio</p>
+  <p class="section-text"> <br>•Led group as Team Lead & Lead Backend Developer to develop web app for ASD persons & caretakers.
+    <br> •Developed account system with MongoDB, Twilio based IoT communication feature, & text-to-speech feature.
+    <br> •Competed against 360 groups, winning an international Hackathon by MLH in my first hackathon.</p>
+  <br>
+  <br>
+  <p><a href="https://devpost.com/software/mindbridge" title="QuBiT">Check out MindBridge!</a></p>
+
+
+  <h3 class="section-heading">QuBiT</h3>
+  <p class="section-text">Spatial Computing + iOS Dev | Swift, Obj-C </p>
+  <p class="section-text"> <br>• <b>QuBiT</b> is an educational application designed to demystify quantum and classical computing for learners. By leveraging <b>AR</b> and interactive content, it transforms complex computing concepts into engaging and understandable experiences.
+    <br>•Reached to over <b>3000</b> users from K-12, with upcoming plans in May to expand to App Store.
+    <br>•Plans to expand: Incorporate account system, additional modules, refined models with blender, tailor to Apple Vision Pro</p>
+  <br>
+  <p><picture> <img src="https://github.com/ryouol/QuBiT/assets/125412884/4961451a-d91c-40b3-ba6f-10c873fe1063" width="200"> </picture></p>
+  <br>
+  <p><a href="https://github.com/ryouol/QuBiT/tree/main" title="QuBiT">Download QuBiT on your phone!</a></p>
+
+
+            <h3 class="section-heading">Voice-Text Vision | Speech-To-Text Device</h3>
+            <p class="section-text">AI/ML Embedded Programming | C++, Python, Audio Normalization, Sampling-Quantization-Coding </p>
+            <p class="section-text">•Built accessible speech-to-text device for the deaf helping aid communication in 99 different languages.
+              <br>•Device & tutorial used by over 200 students across Canada for lecture transcription & translation
+              <br>•Sent converted digital data to Whisper API via serial communication, computing two speech-to-text-endpoints.</p>
+            <br>
+            <br>
+            <p><a href="https://github.com/ryouol/WhisperAI" title="whisperapi">See Project</a></p>
+              
+
+            <h3 class="section-heading">Data Engineering Research</h3>
+            <p class="section-text">Research Experience | Data Engineering, Anamoly Detection, Predictive Analytics
+            </p>
+            <p class="section-text">The significance of cybersecurity cannot be overstated when it comes to functionality, safety and public trust in government institutions. In this context, the advent of AI emerges as a pivotal asset for bolstering defences against cyber threats. This paper delves into the imperative to integrate anomaly detection and predictive analytics, leveraging Gaussian Mixture Models, time series analysis, and predictive functions. The goal is to synergistically enhance the cyber defence mechanisms of the CSE in response to the ever-evolving landscape of cyber threats. </p>
+            <br>
+            <br>
+            <p><a href="https://www.linkedin.com/in/ee-royluo/details/projects/1073214464/multiple-media-viewer/?profileId=ACoAAD-i2ZYB09lXgkI5jc0kfAdlk0oyT6Agm8c&treasuryMediaId=1635552794319" title="Data">See Paper</a></p>
+            
+
+
+            <h3 class="section-heading">Computational Fluid Dynamics Research</h3>
+            <p class="section-text">Research Experience | CAD, CFD, HD Algorithm </p>
+            <p class="section-text"> Analysis and Quantitative Effects of Rim Geometry on the Aerodynamic Performance of Production Passenger Vehicles in North America. Conducted a comprehensive analysis to quantify the effects of rim geometry on the aerodynamic performance of best-selling production passenger vehicles in North America’s 2022 fiscal year. Utilized CFD simulations through Simscale to develop meshes and calculate drag coefficients from CAD models</p>
+            <br>
+            <p> <a href="https://www.linkedin.com/in/ee-royluo/details/projects/78893811/multiple-media-viewer/?profileId=ACoAAD-i2ZYB09lXgkI5jc0kfAdlk0oyT6Agm8c&treasuryMediaId=1635552786642">See Paper</a></p>
+
+
+
+            <h3 class="section-heading">Electric Go Kart</h3>
+            <p class="section-text">Electric Go-Kart | C++, Arduino, AutoCAD </p>
+            <p class="section-text">Constructed an electric go-kart utilizing a 48V battery, and 1800W DC motor 
+              Programmed with Arduino to develop a unique speedometer and voltage reader.
+              Utilized AutoCAD to design, 3D-print, chain tensioners, throttles, speed controller housing, and cable management system.</p>
+            <br>
+           
+            <br>
+            <br>
+            <p><a href="https://www.linkedin.com/in/ee-royluo/details/projects/78754577/multiple-media-viewer/?profileId=ACoAAD-i2ZYB09lXgkI5jc0kfAdlk0oyT6Agm8c&treasuryMediaId=1635540252389" title="Go Kart">See Project</a></p>
+
+
+
+
+
+            <h3 class="section-heading">R.A.M</h3>
+            <p class="section-text">iOS Dev | Swift</p>
+            <p class="section-text">Developed a Swift-based iOS app, "R.A.M," designed to securely store and manage vital daily information.
+              Utilized advanced data structures to efficiently handle sensitive data such as passwords, budgets, and subscriptions within the application, ensuring organized and optimized data management.
+              Implemented robust security features, including biometric authentication, to safeguard user data and maintain the highest levels of privacy and protection</p>
+            <br>
+    
+            <br>
+            <br>
+            <p><a href="https://github.com/ryouol/ramapp" title="RAM">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+
+
+
+   
+          </div>
+        </section>
+        
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Work Experience</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">03</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+
+            <br>
+            <h4> Advanced Electrophoresis Solutions</h4>
+            <br>
+            <p><strong>Full-Stack Software Engineer Intern</strong> [ Jan 2024  -  Apr 2024 ]</p>
+            <br>
+            <p>• C/C++,  Python,  Java,  Pascal    |   Oracle DB,  wxSQLite3,  wxWidgets
+            <br>• Optimized C++, Python, SQL & Pascal for full-stack development of icIEF software, improving system
+            efficiency and user experience through test metrics by 60%.
+            <br>• Engineered encrypted account system with OracleDB, enhancing data security & integrity for researchers.
+            <br>• Automated the control of a robotic needle on a 2D injection tray matrix using Dijkstra’s algorithm for optimal
+            pathfinding, increasing operational precision by 40%, and boosting productivity by reducing manual
+            intervention and optimizing movement efficiency.</p>
+            <br>
+            <br>
+            <br>
+            <h4>Apple</h4>
+            <br>
+            <p><strong>Apple Developer</strong> [ Dec 2022  -  Dec 2023 ]</p>
+            <br>
+            <p>• Swift, Obj-C | RealityKit, ARKit, SceneKit, CoreML, Metal, Vision, CoreGraphics, CoreAnimation
+            <br>• Developed iOS apps ”R.A.M” and AR/VR app ”QuBiT” leveraging Swift, Obj-C, and RealityKit.
+            <br>• mplemented biometric authentication and gmail authentication, increaseing data security & user trust by 30%. </p>
+            <br>
+            <br>
+            <br>
+            <h4>ChrisCuts</h4>
+            <br>
+            <p><strong>Lead Software Engineer</strong> [ Sep 2023  -  Dec 2023 ]</p>
+            <br>
+            <p>• Javascript, HTML, CSS/SCSS | Figma, Bootstrap4, React
+            <br>• Designed & architected the web app using Figma, HTML5/CSS, SCSS, JavaScript, Bootstrap, & React.
+            <br>• ntegrated Google Maps API for geocoding, & developed a formula to provide clients with estimated service quotes.
+            <br>• Led the software development team through conceptual design to deployment, emphasizing on UI & scalability. </p>
+            <br>
+            <br>
+            <br>
+           <h4> Department of National Defense</h4>
+            <br>
+            <p><strong>Chief Petty Officer Second Class + Staff Sergent</strong> [ Sep 2017  -  Jul 2023 ]</p>
+            <br>
+            <p>• Assumed second-in-command role.
+            <br>• Led and directed the military band as Drum Major.
+            <br>• Honoured with distinguished leadership award.
+            <br>• Streamlined interagency communication by 50%, enhancing collaboration by creating teams for staff. </p>
+            <br>
+            <br>
+            <br>
+           <h4> Jericho Sailing Ceneter </h4>
+            <br>
+            <p><strong>Sail Instructor</strong> [ Sep 2022  -  Jun 2023 ]</p>
+            <br>
+            <p>• Collaborated with instructors to educate beginners on the physics behind sailing in a classroom setting.
+            <br>• Delivered on-water coaching to intermediate sailors 
+            <br>• Fostered teamwork among fellow instructors which contributed to a supportive teaching environment. </p>
+            <br>
+            <br>
+            <br>
+           <h4> BNS Engineering </h4>
+            <br>
+            <p><strong>Founder & President </strong> [ Sep 2022  -  Jun 2023 ]</p>
+            <br>
+            <p>• C++, Python, Java | AutoCAD, Arduino, Rasberry Pi
+            <br>• Founded a pioneering student-led initiative that synergizes engineering principles with practical applications.
+            <br>• Orchestrated, & secured $5,000 in grants from the Canadian Physics Society & PAC for engineering education.
+            <br>• Initiated the Women in STEM scholarship, enhancing STEM engagement among a diverse group of 13,600+
+            students. </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p><strong>Piano Teacher</strong> [ Dec 2019  -  Jun 2023 ]</p>
+            <br>
+            <p>• ARCT Diploma in piano performance.
+            <br>• Led 3 students to RCM level 8 </p>
+            <br>
+            <br>
+            <br>
+           <h4> Ford Motor Company </h4>
+            <br>
+            <p><strong>Automotive Mechanic Intern</strong> [ Jul 2022  -  Aug 2022 ]</p>
+            <br>
+            <p>• Performed repairs and maintenance tasks, ensuring vehicles met quality standards and performance benchmarks.
+            <br>• Supported senior technicians in conducting system tests on Ford's new electric vehicle line (F-150 Lighting, Mustang Mach-E).</p>
+            <br>
+            <br>
+            <br>
+           <h4> Elections Canada</h4>
+            <br>
+            <p><strong>Central Poll Supervisor</strong> [ Sep 2021  -  Oct 2021 ]</p>
+            <br>
+            <p>• Oversaw the credibility, security, and organization of the 2021 Canadian Federal election.
+            <br>•Led a cohesive team with a second supervisor, enforcing roles and procedures among poll workers.</p>
+
+  
+          </div>
+        </section>
+
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">CONTACT</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">04</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Linkedin</h3>
+            <p class="section-text">Connect with me on Linkedin!</p>
+            <br>
+            <p><a href="https://www.linkedin.com/in/ee-royluo/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a> </p>
+            <h3 class="section-heading">Github</h3>
+            <p class="section-text">Check out some of my other projects on Github!</p>
+            <br>
+            <p><a href="https://github.com/ryouol"><img src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white" alt="Github"></a> </p>
+
+            <h3 class="section-heading">Email</h3>
+            <p class="section-text">Feel free to send me an email!</p>
+            <br>
+            <p><a href="mailto:royluo05@gmail.com">royluo05@gmail.com</a></p>
+            <p> or at: </p>
+            <p><a href = "mailto:r55luo@uwaterloo.ca">r55luo@uwaterloo.ca</a></p>
+
+            
+          </div>
+        </section>
+        <footer class="footer">
+          <span class="footer__copyright"> Copyright &copy; 2024 - Roy Luo</span>
+        </footer><br><br>
+
+
+
+
+
+      </div>
+    </div>
+    
+  </body>
+</html>
