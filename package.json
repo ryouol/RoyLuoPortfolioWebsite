@@ -3,13 +3,18 @@
   "name": "Roy-website",
   "private": true,
   "version": "3.2.1",
+
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "webpack --config ./src/client/webpack.prod.js",
+    "start": "node ./dist/server/server.js",
+    "dev": "webpack serve --config ./src/client/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ./dist/client"
   },
+
+
+
+
   "devDependencies": {
     "@ashthornton/asscroll": "^2.0.7",
     "events": "^3.3.0",
